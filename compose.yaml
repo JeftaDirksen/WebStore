@@ -1,6 +1,6 @@
 services:
-
   webstore:
+    container_name: webstore
     build: .
     ports:
       - "8080:80"
