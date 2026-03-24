@@ -23,7 +23,7 @@ if ($method === 'GET') {
         readfile($file);
     } else {
         http_response_code(404);
-        echo "File not found." . PHP_EOL;
+        echo "Store not found." . PHP_EOL;
     }
 }
 
