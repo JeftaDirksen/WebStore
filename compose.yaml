@@ -3,9 +3,11 @@ services:
     container_name: webstore
     build: .
     ports:
-      - "8080:80"
+      - "${PORT:-8080}:80"
     user: "1000:1000"
     volumes:
-      - ./html:/var/www/html
-      - ./store:/store
+      - store:/store
     restart: unless-stopped
+
+volumes:
+  store:
